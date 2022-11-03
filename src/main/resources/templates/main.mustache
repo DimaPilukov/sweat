@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Main</title>
+</head>
+<body>
+<div>
+    <form action="/logout" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+<div>
+    <form method="post">
+        <input type="text" name="text" placeholder="Put message"/>
+        <input type="text" name="tag" placeholder="Put tag"/>
+        <button type="submit">ADD FORM</button>
+    </form>
+</div>
+<form method="post" action="filter">
+    <input type="text" name="text">
+    <button type="submit">Filter</button>
+</form>
+<div>List messages</div>
+
+{{#messages}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{text}}</span>
+        <i>{{tag}}</i>
+    </div>
+{{/messages}}
+
+</body>
+</html>
